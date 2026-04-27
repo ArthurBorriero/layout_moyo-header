@@ -10,11 +10,19 @@ body {
   --color-black: #000;
 }
 
-/* Header */
+/* Header (full width) */
 .header {
+  width: 100%;
+}
+
+/* Inner container (ESSENCIAL) */
+.header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 /* Logo */
@@ -23,7 +31,7 @@ body {
   height: 40px;
 }
 
-/* Nav list */
+/* Nav */
 .nav__list {
   display: flex;
   list-style: none;
@@ -31,16 +39,16 @@ body {
   padding: 0;
 }
 
-/* Spacing without gap */
+/* spacing */
 .nav__item {
-  margin-right: 30px;
+  margin-right: 40px;
 }
 
 .nav__item:last-child {
   margin-right: 0;
 }
 
-/* Links */
+/* links */
 .nav__link {
   position: relative;
   display: block;
@@ -54,22 +62,21 @@ body {
   font-weight: 500;
 }
 
-/* Hover */
+/* hover */
 .nav__link:hover {
   color: var(--color-blue);
 }
 
-/* Active */
+/* active */
 .nav__link.is-active {
   color: var(--color-blue);
 }
 
-/* Underline */
 .nav__link.is-active::after {
   content: '';
   position: absolute;
-  left: 0;
   bottom: 0;
+  left: 0;
 
   width: 100%;
   height: 4px;
